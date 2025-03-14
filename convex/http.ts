@@ -5,9 +5,6 @@ import { api } from "./_generated/api";
 
 const http = httpRouter();
 
-
-
-
 http.route({
   path: "/clerk-webhook",
   method: "POST",
