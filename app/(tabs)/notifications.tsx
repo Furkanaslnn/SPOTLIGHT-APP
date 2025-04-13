@@ -23,7 +23,7 @@ const Notifications = () => {
 
       <FlatList
         data={notifications}
-        renderItem={({ item }) => <Notification notifications={item} />}
+        renderItem={({ item }) => <Notification notification={item} />}
         keyExtractor={(item) => item._id}
         showsHorizontalScrollIndicator={false}
         contentContainerStyle={styles.listContainer}

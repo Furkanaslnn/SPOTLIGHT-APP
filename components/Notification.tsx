@@ -6,23 +6,22 @@ import { Link } from "expo-router";
 import { Image } from "expo-image";
 import { formatDistanceToNow } from "date-fns";
 
-export default function Notification({ notifications }: any) {
+export default function Notification({ notification }: any) {
   return (
     <View style={styles.notificationItem}>
       <View style={styles.notificationContent}>
-        <Link href={`/notifications`} asChild>
-          {/*/user/${notifications.sender._id}*/}
+        <Link href={`/user/${notification.sender._id}`} asChild>
           <TouchableOpacity style={styles.avatarContainer}>
             <Image
-              source={notifications.sender.image}
+              source={notification.sender.image}
               style={styles.avatar}
               contentFit="cover"
               transition={200}
             ></Image>
             <View style={styles.iconBadge}>
-              {notifications.type === "like" ? (
+              {notification.type === "like" ? (
                 <Ionicons name="heart" size={14} color={"#8B5CF6"}></Ionicons>
-              ) : notifications.type === "follow" ? (
+              ) : notification.type === "follow" ? (
                 <Ionicons
                   name="person-add"
                   size={24}
@@ -43,29 +42,29 @@ export default function Notification({ notifications }: any) {
           <Link href={"/notifications"} asChild>
             <TouchableOpacity>
               <Text style={styles.username}>
-                {notifications.sender.username}
+                {notification.sender.username}
               </Text>
             </TouchableOpacity>
           </Link>
 
           <Text style={styles.action}>
-            {notifications.type === "follow"
+            {notification.type === "follow"
               ? "started following you"
-              : notifications.type === "like"
+              : notification.type === "like"
                 ? "liked your post"
-                : `commented: "${notifications.comment}"`}
+                : `commented: "${notification.comment}"`}
           </Text>
           <Text style={styles.timeAgo}>
-            {formatDistanceToNow(notifications._creationTime, {
+            {formatDistanceToNow(notification._creationTime, {
               addSuffix: true,
             })}
           </Text>
         </View>
       </View>
 
-      {notifications.post && (
+      {notification.post && (
         <Image
-          source={notifications.post.imageUrl}
+          source={notification.post.imageUrl}
           style={styles.postImage}
           contentFit="cover"
           transition={200}
