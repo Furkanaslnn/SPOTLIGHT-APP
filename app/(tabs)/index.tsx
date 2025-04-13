@@ -6,16 +6,31 @@ import { api } from "@/convex/_generated/api";
 import { useAuth } from "@clerk/clerk-expo";
 import { Ionicons } from "@expo/vector-icons";
 import { useQuery } from "convex/react";
-import { FlatList, Text, TouchableOpacity, View } from "react-native";
+import {
+  FlatList,
+  RefreshControl,
+  Text,
+  TouchableOpacity,
+  View,
+} from "react-native";
 import { styles } from "../../styles/feed.styles";
+import { useState } from "react";
 
 export default function Index() {
   const { signOut } = useAuth();
+  const [refreshing, setRefreshing] = useState(false);
 
   const posts = useQuery(api.posts.getFeedPosts);
 
   if (posts == undefined) return <Loader></Loader>;
   if (posts.length === 0) return <NoPostsFound></NoPostsFound>;
+
+  const onRefresh = () => {
+    setRefreshing(true);
+    setTimeout(() => {
+      setRefreshing(false);
+    }, 2000);
+  };
 
   const handleSignOut = async () => {
     try {
@@ -46,6 +61,13 @@ export default function Index() {
         showsVerticalScrollIndicator={false}
         contentContainerStyle={{ paddingBottom: 60 }}
         ListHeaderComponent={<StoriesSection />}
+        refreshControl={
+          <RefreshControl
+            refreshing={refreshing}
+            onRefresh={onRefresh}
+            tintColor={COLORS.primary}
+          />
+        }
       ></FlatList>
     </View>
   );
