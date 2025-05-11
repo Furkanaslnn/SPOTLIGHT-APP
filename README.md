@@ -15,7 +15,7 @@
 > Uygulamanızı **Canvas**, **ProductHunt**, **Dribbble** veya benzeri platformlarda paylaşmadan önce aşağıdaki görselleri `/screenshots/` klasörüne yerleştirin.
 
 <p align="center">
-  <img src="./screenshots/home.png" width="250" />
+  <img src="./screenshots/login.png" width="250" />
   <img src="./screenshots/create-post.png" width="250" />
   <img src="./screenshots/post-detail.png" width="250" />
   <img src="./screenshots/profile.png" width="250" />
@@ -25,15 +25,15 @@
 
 ## ⚙️ Temel Özellikler
 
-| Özellik             | Açıklama |
-|---------------------|----------|
-| 🔐 **Clerk Auth**   | Kullanıcı kaydı, giriş/çıkış, token yönetimi |
-| ☁️ **Convex Backend** | Gerçek zamanlı veritabanı & veri işlemleri |
-| 🖼️ **Post Paylaşımı** | Fotoğraf, açıklama ile gönderi oluşturma |
-| ❤️ **Beğeniler**    | Gönderilere çift tıklama ile beğeni |
-| 💬 **Yorumlar**     | Gönderilere yorum yapabilme |
-| 🧭 **Keşfet Sayfası** | Tüm kullanıcıların içeriklerini görme |
-| 👤 **Profil Ekranı** | Kişiye özel gönderi geçmişi |
-| 🌐 **Zustand State**| Global state yönetimi ile performanslı yapı |
+| Özellik               | Açıklama                                     |
+| --------------------- | -------------------------------------------- |
+| 🔐 **Clerk Auth**     | Kullanıcı kaydı, giriş/çıkış, token yönetimi |
+| ☁️ **Convex Backend** | Gerçek zamanlı veritabanı & veri işlemleri   |
+| 🖼️ **Post Paylaşımı** | Fotoğraf, açıklama ile gönderi oluşturma     |
+| ❤️ **Beğeniler**      | Gönderilere çift tıklama ile beğeni          |
+| 💬 **Yorumlar**       | Gönderilere yorum yapabilme                  |
+| 🧭 **Keşfet Sayfası** | Tüm kullanıcıların içeriklerini görme        |
+| 👤 **Profil Ekranı**  | Kişiye özel gönderi geçmişi                  |
+| 🌐 **Zustand State**  | Global state yönetimi ile performanslı yapı  |
 
 ---
