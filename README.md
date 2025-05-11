@@ -15,7 +15,7 @@
 > Uygulamanızı **Canvas**, **ProductHunt**, **Dribbble** veya benzeri platformlarda paylaşmadan önce aşağıdaki görselleri `/screenshots/` klasörüne yerleştirin.
 
 <p align="center">
-  <img src="./screenshots/login.png" width="250" />
+  <img src="./images/login.png" width="250" />
   <img src="./screenshots/create-post.png" width="250" />
   <img src="./screenshots/post-detail.png" width="250" />
   <img src="./screenshots/profile.png" width="250" />
