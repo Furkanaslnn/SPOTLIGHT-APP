@@ -12,8 +12,6 @@
 
 ## 🖼️ Uygulama Görselleri (Canvas / Ribana Vitrini)
 
-> Uygulamanızı **Canvas**, **ProductHunt**, **Dribbble** veya benzeri platformlarda paylaşmadan önce aşağıdaki görselleri `/screenshots/` klasörüne yerleştirin.
-
 <p align="center">
   <img src="./images/login.png" width="250" />
   <img src="./screenshots/create-post.png" width="250" />
